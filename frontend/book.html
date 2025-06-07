@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📚 Book Nook – Cozy Nest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-buttons">
+    <a href="index.html" class="journal-btn">🏡 Back to CozyNest</a>
+  </div>
+
+  <div class="container">
+    <h1>📚 Book Nook</h1>
+
+    <div class="book-input">
+      <input type="text" id="bookTitle" placeholder="Enter book title..." />
+      <textarea id="bookNote" placeholder="Optional note or review..."></textarea>
+      <button onclick="addBook()">➕ Add Book</button>
+    </div>
+
+    <h3>My Bookshelf</h3>
+    <ul id="bookList"></ul>
+  </div>
+
+  <script src="book.js"></script>
+</body>
+</html>

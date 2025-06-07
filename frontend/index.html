@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CozyNest – Daily Affirmation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header and Affirmation -->
+    <h1>🌸 Cozy Nest</h1>
+    <p id="affirmation" class="fade">Loading affirmation...</p>
+
+    <!-- Action Buttons -->
+    <div class="btn-group">
+      <button onclick="fetchAffirmation()">✨ New Affirmation</button>
+      <button onclick="saveFavorite()">💞 Save</button>
+      <button onclick="toggleMusic()">🎵 Play Music</button>
+    </div>
+
+    <!-- Favorites Section -->
+    <div class="favorites">
+      <h3>My Favourites 💁🏻‍♀️‍</h3>
+      <ul id="favoritesList"></ul>
+    </div>
+  </div>
+
+  <!-- Journal Button -->
+  <div class="top-buttons">
+  <button onclick="openJournal()" class="journal-btn">📓 Journal</button>
+  <a href="journal.html" class="journal-btn">📖 View Entries</a>
+  <a href="book.html" class="journal-btn">📚 Book Nook</a>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="../assets/path-of-the-wind-lofi-223116.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Mood Journal Modal -->
+  <div id="journalModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeJournal()">&times;</span>
+      <h2>🧠 How are you feeling?</h2>
+
+      <label for="mood">Mood:</label>
+      <select id="mood">
+        <option>😊 Happy</option>
+        <option>😢 Sad</option>
+        <option>😰 Anxious</option>
+        <option>😴 Tired</option>
+        <option>💪 Confident</option>
+      </select>
+
+      <label for="note">Note:</label>
+      <textarea id="note" rows="4" placeholder="Write anything you feel..."></textarea>
+
+      <label for="taggedAffirmation">Affirmation (optional):</label>
+      <input id="taggedAffirmation" placeholder="Copy from above if it helped today" />
+
+      <button onclick="saveJournal()">💾 Save Entry</button>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
